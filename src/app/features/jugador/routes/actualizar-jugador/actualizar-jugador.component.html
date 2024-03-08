@@ -1,1 +1,36 @@
-<p>actualizar-jugador works!</p>
+<div class="container mt-5 shadow rounded">
+    <div class="row">
+        <div class="col my-4">
+            <form id="formularioNuevoJugador" [formGroup]="formularioActualizarJugador" (ngSubmit)="onSubmit()">
+                <div class="row">
+                    <div class="col form-group">
+                        <label class="form-label">Nombre</label>
+                        <input type="text" class="form-control" formControlName="nombre">
+                    </div>
+                    <div class="col-8 form-group">
+                        <label class="form-label">Apellidos</label>
+                        <input type="text" class="form-control" formControlName="apellidos">
+                    </div>
+                </div>
+                <div class="row my-3">
+                    <div class="col form-group">
+                        <label class="form-label">DNI</label>
+                        <input type="text" class="form-control" formControlName="dni">
+                    </div>
+                    <div class="col form-group">
+                        <label class="form-label">Fecha de nacimiento</label>
+                        <input type="date" class="form-control" formControlName="fechaNac">
+                    </div>
+                </div>
+            </form>
+            <div class="row justify-content-end">
+                <div class="col-auto">
+                    <button class="btn btn-secondary" (click)="cancelarActualizarJugador()">Cancelar</button>
+                </div>
+                <div class="col-auto">
+                    <button class="btn btn-outline-primary" form="formularioNuevoJugador" [disabled]="!formularioActualizarJugador.valid">Actualizar jugador/a</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -20,8 +20,12 @@ export class JugadorService {
     return this.http.get<Jugador>(this.jugadorURL + "/" + jugadorID);
   }
 
-  save(jugador: any){
+  save(jugador: Jugador){
     return this.http.post<Jugador>(this.jugadorURL, jugador);
+  }
+
+  update(jugadorID: any, jugador: Jugador){
+    return this.http.put<Jugador>(this.jugadorURL + "/" + jugadorID, jugador);
   }
 
   delete(jugadorID: any){

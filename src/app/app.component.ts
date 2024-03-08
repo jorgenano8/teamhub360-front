@@ -1,7 +1,7 @@
 import { HttpClientModule } from '@angular/common/http';
 import { Component } from '@angular/core';
-import { RouterModule, RouterOutlet } from '@angular/router';
-import { HeaderComponent } from './core/layouts/header/header.component';
+import { RouterOutlet } from '@angular/router';
+import { GeneralComponent } from './core/layouts/general/general.component';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +9,7 @@ import { HeaderComponent } from './core/layouts/header/header.component';
   imports: [
     RouterOutlet,
     HttpClientModule,
-    HeaderComponent
+    GeneralComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'

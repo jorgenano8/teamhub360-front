@@ -6,19 +6,28 @@ import { ActualizarJugadorComponent } from './features/jugador/routes/actualizar
 import { DashboardComponent } from './features/dashboard/routes/dashboard.component';
 
 export const routes: Routes = [
-    {
-        path: '', component: DashboardComponent
-    },
-    {
-        path: 'jugadores', component: ListaJugadorComponent
-    },
-    {
-        path: 'jugadores/nuevo', component: NuevoJugadorComponent
-    },
-    {
-        path: 'jugadores/:id', component: DetalleJugadorComponent
-    },
-    {
-        path: 'jugadores/:id/actualizar', component: ActualizarJugadorComponent
-    }
+  {
+    path: '',
+    component: DashboardComponent,
+  },
+  {
+    path: 'dashboard',
+    component: DashboardComponent,
+  },
+  {
+    path: 'jugadores',
+    component: ListaJugadorComponent,
+  },
+  {
+    path: 'jugadores/nuevo',
+    component: NuevoJugadorComponent,
+  },
+  {
+    path: 'jugadores/:id',
+    component: DetalleJugadorComponent,
+  },
+  {
+    path: 'jugadores/:id/actualizar',
+    component: ActualizarJugadorComponent,
+  },
 ];

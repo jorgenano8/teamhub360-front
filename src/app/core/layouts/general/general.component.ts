@@ -1,16 +1,13 @@
 import { Component } from '@angular/core';
-import { HeaderComponent } from '../header/header.component';
 import { RouterOutlet } from '@angular/router';
 import { SidebarComponent } from '../sidebar/sidebar.component';
-
+import { FooterComponent } from '../footer/footer.component';
 
 @Component({
   selector: 'app-general',
   standalone: true,
-  imports: [HeaderComponent, SidebarComponent, RouterOutlet],
+  imports: [SidebarComponent, RouterOutlet, FooterComponent],
   templateUrl: './general.component.html',
-  styleUrl: './general.component.css'
+  styleUrl: './general.component.css',
 })
-export class GeneralComponent {
-
-}
+export class GeneralComponent {}

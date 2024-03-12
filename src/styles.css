@@ -11,3 +11,7 @@ body {
 .wrapper{
     height: 100% !important;
 }
+
+.sidebar-navy-primary{
+    background-color: #001f3f !important;
+  }

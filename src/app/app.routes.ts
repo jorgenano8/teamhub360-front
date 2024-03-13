@@ -7,10 +7,6 @@ import { DashboardComponent } from './features/dashboard/routes/dashboard.compon
 
 export const routes: Routes = [
   {
-    path: '',
-    component: DashboardComponent,
-  },
-  {
     path: 'dashboard',
     component: DashboardComponent,
   },
@@ -30,4 +26,5 @@ export const routes: Routes = [
     path: 'jugadores/:id/actualizar',
     component: ActualizarJugadorComponent,
   },
+  { path: '**', redirectTo: 'dashboard' },
 ];

@@ -1,36 +1,58 @@
-<div class="container mt-5 shadow rounded">
-    <div class="row">
-        <div class="col my-4">
-            <form id="formularioNuevoJugador" [formGroup]="formularioActualizarJugador" (ngSubmit)="onSubmit()">
-                <div class="row">
-                    <div class="col form-group">
-                        <label class="form-label">Nombre</label>
-                        <input type="text" class="form-control" formControlName="nombre">
-                    </div>
-                    <div class="col-8 form-group">
-                        <label class="form-label">Apellidos</label>
-                        <input type="text" class="form-control" formControlName="apellidos">
-                    </div>
-                </div>
-                <div class="row my-3">
-                    <div class="col form-group">
-                        <label class="form-label">DNI</label>
-                        <input type="text" class="form-control" formControlName="dni">
-                    </div>
-                    <div class="col form-group">
-                        <label class="form-label">Fecha de nacimiento</label>
-                        <input type="date" class="form-control" formControlName="fechaNac">
-                    </div>
-                </div>
-            </form>
-            <div class="row justify-content-end">
-                <div class="col-auto">
-                    <button class="btn btn-secondary" (click)="cancelarActualizarJugador()">Cancelar</button>
-                </div>
-                <div class="col-auto">
-                    <button class="btn btn-outline-primary" form="formularioNuevoJugador" [disabled]="!formularioActualizarJugador.valid">Actualizar jugador/a</button>
-                </div>
-            </div>
-        </div>
+<div class="content-header">
+  <div class="container-fluid">
+    <div class="row mb-2">
+      <div class="col-sm-6">
+        <h1 class="m-0">Actualizar jugador/a</h1>
+      </div>
     </div>
+  </div>
 </div>
+
+<section class="content px-5">
+  <div class="card">
+    <form id="formularioNuevoJugador" [formGroup]="formularioActualizarJugador" (ngSubmit)="onSubmit()">
+      <div class="card-body">
+        <div class="row">
+          <div class="col">
+            <div class="form-group">
+              <label for="nombre" class="form-label">Nombre</label>
+              <input type="text" class="form-control" formControlName="nombre" />
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-group">
+              <label for="apellidos" class="form-label">Apellidos</label>
+              <input type="text" class="form-control" formControlName="apellidos" />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="form-group">
+              <label for="dni" class="form-label">DNI</label>
+              <input type="text" class="form-control" formControlName="dni" />
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-group">
+              <label for="fechaNac" class="form-label">Fecha de nacimiento</label>
+              <input type="date" class="form-control" formControlName="fechaNac" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-footer">
+        <button
+          type="submit"
+          class="btn btn-outline-primary float-right ml-3"
+          form="formularioNuevoJugador"
+          [disabled]="!formularioActualizarJugador.valid"
+        >
+          <i class="fa-solid fa-pen-to-square"></i> Actualizar jugador/a
+        </button>
+        <button class="btn btn-secondary float-right" (click)="cancelarActualizarJugador()">Cancelar</button>
+      </div>
+    </form>
+  </div>
+</section>

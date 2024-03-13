@@ -1,11 +1,40 @@
-<div class="container mt-5">
-    <div class="card shadow rounded">
-        <div class="card-header">
-            <h3>{{jugador?.nombre}} {{jugador?.apellidos}}</h3>
-        </div>
-        <div class="card-body">
-            <p>{{jugador?.dni}}</p>
-            <p>{{jugador?.fechaNac}}</p>
-        </div>
+<div class="content-header">
+  <div class="container-fluid">
+    <div class="row mb-2">
+      <div class="col-sm-6">
+        <h1 class="m-0">Ficha jugador/a</h1>
+      </div>
     </div>
+  </div>
 </div>
+
+<section class="content px-5">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col">
+        <button type="button" class="btn btn-secondary" (click)="atras()">
+          <i class="fa-solid fa-chevron-left"></i> Atrás
+        </button>
+      </div>
+      <div class="col">
+        <button
+          type="button"
+          class="btn btn-outline-primary float-end"
+          [routerLink]="['/jugadores/' + jugadorID + '/actualizar']"
+        >
+          <i class="fa-solid fa-pen-to-square"></i> Editar jugador/a
+        </button>
+      </div>
+    </div>
+
+    <div class="card mt-3">
+      <div class="card-body">
+        <h3>{{ jugador?.nombre }} {{ jugador?.apellidos }}</h3>
+        <p>{{ jugador?.dni }}</p>
+        <p>{{ jugador?.fechaNac }}</p>
+      </div>
+      <!-- /.card-body -->
+    </div>
+    <!-- /.card -->
+  </div>
+</section>

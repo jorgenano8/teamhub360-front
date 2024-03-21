@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { tap, map } from 'rxjs';
 import { environment } from '../../../../environments/environment';
 
-const authURL: string = environment.url_api;
+const authURL: string = environment.url_api + 'auth/';
 
 @Injectable({
   providedIn: 'root',
